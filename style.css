@@ -205,11 +205,16 @@
 @media(max-width: 500px){
    
     .home .home-content .text-2{
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .home .home-content .text-3{
-        font-size: 27px;
+        font-size: 24px;
+    }
+
+    .navbar .max-width .logo a{
+        font-size: 20px;
+        
     }
     
 }
