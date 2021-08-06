@@ -145,7 +145,7 @@ html {
     border-radius: 30px;
     margin-top: 20px;
     font-family: poppins;
-    border: 2px solid grey;
+    border: 2px solid indigo;
     transition: all 0.3s ease;
 }
 
@@ -221,7 +221,7 @@ section .title {
     border-radius: 30px;
     margin-top: 30px;
     font-family: poppins;
-    border: 2px solid grey;
+    border: 2px solid indigo;
     transition: all 0.3s ease;
 }
 
@@ -361,7 +361,7 @@ section .title::after {
     border-radius: 30px;
     margin-top: 30px;
     font-family: poppins;
-    border: 2px solid grey;
+    border: 2px solid indigo;
     transition: all 0.3s ease;
 }
 
