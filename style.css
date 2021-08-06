@@ -6,6 +6,10 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* gonna style the nav bar */
 
 .navbar {
@@ -48,6 +52,7 @@
 }
 
 .navbar .menu li a {
+    display: block;
     color: rgb(39, 175, 118);
     font-family: ubuntu;
     font-weight: 500;
@@ -63,6 +68,30 @@
     font-size: 23px;
     cursor: pointer;
     display: none;
+}
+
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px; 
+    background: indigo;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .navbar .menu li a:hover {
@@ -135,7 +164,7 @@
     padding: 100px 0;
 }
 
-.about, .services, .skills, .teams, .contact {
+.about, .services, .skills, .teams, .contact, footer {
     font-family: 'Poppins', 'sans-serif';
 }
 
@@ -475,8 +504,7 @@ section .title::after {
     content: "mail me";
 }
 
-
-.contact .contact-content .column  {
+.contact .contact-content .column {
     width: calc(50% - 30px);
     margin-top: 50px;
 }
@@ -495,7 +523,8 @@ section .title::after {
     height: 65px;
     align-items: center;
 }
-.contact .contact-content .row .info{
+
+.contact .contact-content .row .info {
     margin-left: 30px;
 }
 
@@ -505,36 +534,39 @@ section .title::after {
     margin-bottom: 10px;
 }
 
-.contact .contact-content .row i{
+.contact .contact-content .row i {
     font-size: 25px;
     color: gray;
 }
 
-.contact .contact-content .info .head{
+.contact .contact-content .info .head {
     font-weight: 500;
 }
 
-.contact .contact-content .info .sub-title{
+.contact .contact-content .info .sub-title {
     color: #333;
 }
-.contact .right form .fields{
+
+.contact .right form .fields {
     display: flex;
 }
-.contact .right form .field,
-.contact .right form .fields .field{
+
+.contact .right form .field, .contact .right form .fields .field {
     height: 45px;
     width: 100%;
     margin-bottom: 15px;
 }
-.contact .right form .textarea{
+
+.contact .right form .textarea {
     height: 80px;
     width: 100%;
 }
-.contact .right form .name{
+
+.contact .right form .name {
     margin-right: 10px;
 }
-.contact .right form .field input,
-.contact .right form .textarea textarea{
+
+.contact .right form .field input, .contact .right form .textarea textarea {
     height: 100%;
     width: 100%;
     border: 1px solid lightgrey;
@@ -545,42 +577,58 @@ section .title::after {
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
 }
-.contact .right form .field input:focus,
-.contact .right form .textarea textarea:focus{
+
+.contact .right form .field input:focus, .contact .right form .textarea textarea:focus {
     border-color: #b3b3b3;
 }
-.contact .right form .textarea textarea{
-  padding-top: 10px;
-  resize: none;
-}
-.contact .right form .button-area{
-  display: flex;
-  align-items: center;
-}
-.right form .button-area button{
-  color: #fff;
-  display: block;
-  width: 160px!important;
-  height: 45px;
-  outline: none;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  flex-wrap: nowrap;
-  background: indigo;
-  border: 2px solid indigo;
-  transition: all 0.3s ease;
-}
-.right form .button-area button:hover{
-  color: indigo;
-  background: none;
+
+.contact .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
 }
 
+.contact .right form .button-area {
+    display: flex;
+    align-items: center;
+}
 
+.right form .button-area button {
+    color: #fff;
+    display: block;
+    width: 160px!important;
+    height: 45px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    background: indigo;
+    border: 2px solid indigo;
+    transition: all 0.3s ease;
+}
 
+.right form .button-area button:hover {
+    color: indigo;
+    background: none;
+}
 
+/* footer section styling */
 
+footer {
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+}
+
+footer span a {
+    color: lightskyblue;
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
 
 /* responsive media query start */
 
@@ -674,12 +722,11 @@ section .title::after {
         width: calc(50% - 20px);
         margin-bottom: 20px;
     }
-    .skills .skills-content .column, .contact .contact-content .column{
+    .skills .skills-content .column, .contact .contact-content .column {
         width: 100%;
         margin-top: 50px;
     }
-
-    .contact .contact-content .column{
+    .contact .contact-content .column {
         width: 100%;
         margin-top: 35px;
     }
